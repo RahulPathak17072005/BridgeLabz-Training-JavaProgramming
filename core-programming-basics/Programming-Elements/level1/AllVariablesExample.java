@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class AllVariablesExample {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -15,6 +16,6 @@ public class AllVariablesExample {
         System.out.println("User Inputs: " + input1 + ", " + input2);
         System.out.println("Sum: " + sum);
         System.out.println("Product: " + product);
-
+        sc.close();
     }
 }
