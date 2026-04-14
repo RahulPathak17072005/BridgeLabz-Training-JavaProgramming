@@ -7,7 +7,7 @@ public class DivisiblrByFive {
         System.out.print("Enter the number to check: ");
         int n = sc.nextInt();
 
-        boolean isDivisible = (n % 5 == 0);  // simplified
+        boolean isDivisible = (n % 5 == 0);  
 
         System.out.println("Is the number " + n + " divisible by 5? " + isDivisible);
 
