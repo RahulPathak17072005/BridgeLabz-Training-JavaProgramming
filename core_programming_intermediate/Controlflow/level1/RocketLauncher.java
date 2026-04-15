@@ -1,4 +1,4 @@
- package core_programming_intermediate.Controlflow.level1;
+package core_programming_intermediate.Controlflow.level1;
 import java.util.Scanner;
 class RocketLauncher {
 public static void main(String[] args) {
