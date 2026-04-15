@@ -1,7 +1,7 @@
 package core_programming_intermediate.Controlflow.level2;
 import java.util.*;
 
-class FizzBuzz {
+class FizzBuzz2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Number: ");
