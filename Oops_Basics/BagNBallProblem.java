@@ -8,7 +8,9 @@ class BallProblem{
         this.whiteBalls = whiteBalls;
     }
     public double probability(int draws,int whiteDraws){
-        return  (combination(whiteBalls, whiteDraws) *combination(totalBalls - whiteBalls, draws - whiteDraws)) /(double) combination(totalBalls, draws);
+        return  (combination(whiteBalls, whiteDraws) *
+        combination(totalBalls - whiteBalls, draws - whiteDraws)) /
+        (double) combination(totalBalls, draws);
     }
     public long combination(int n,int r){
         if(r>n)return 0;
@@ -18,7 +20,6 @@ class BallProblem{
 
         }
         return result;
-
     }
 
 }
@@ -36,8 +37,6 @@ int k=sc.nextInt();
 BallProblem ball=new BallProblem(n, w);
 double prob = ball.probability(s, k);
 System.out.println("Probability of drawing " + k + " white balls in " + s + " draws = " + prob);
-
 sc.close();
-}
-    
+}  
 }
