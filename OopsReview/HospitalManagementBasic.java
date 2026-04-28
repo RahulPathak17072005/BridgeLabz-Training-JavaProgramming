@@ -39,6 +39,7 @@ class Patient extends Person {
     public String getRole(){
         return "Patient";
     }
+    @Override
      public String toString(){
         return "Patient"+" Id :"+getId()+" name: "+ getName()+" age : "+getAge()+" Disease "+disease + " ward "+ ward;
     }
