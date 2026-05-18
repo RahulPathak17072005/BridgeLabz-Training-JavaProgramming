@@ -1,5 +1,4 @@
 package Dsa_Basics.review;
-
 public class MinStack {
 class Node{
     int data;
@@ -12,33 +11,40 @@ Node(int data){
 Node top=null;
 void push(int data){
     Node newNode=new Node(data);
-    if(top==null){
-        top=newNode;
-        return;
-    }
-    top.next=newNode;
-    newNode=top;
+    newNode.next=top;
+    top=newNode;
 }
-void pop(){
+int  pop(){
     if(top==null){
        System.out.println("Stack UnderFlow") ;
+       return-1;
     }
+    int popped=top.data;
     top=top.next;
+    return popped;
 }
-void top(){
+int top(){
     if(top==null){
-       System.out.println("0");;
+       System.out.println("Empty");
+       return -1;
     }
-    top=top.next;
-    System.out.print(top.data);
-}
-public int getMin(int data){
-  // while(top!=null){
-     // if(top())
-     //   System.out.println(top.data);
-   // }
-   // top=top.next;
    return top.data;
+}
+public int getMin(){
+  if(top==null){
+    System.out.println("Empty stack");
+    return -1;
+  }
+  int min= top.data;
+  Node temp=top;
+  while(temp!=null){
+    if(temp.data<min){
+        min=temp.data;
+    }
+    temp=temp.next;
+  }
+  return min;
+
 }
 public static void main(String[] args) {
     MinStack minStack=new MinStack();
@@ -47,6 +53,9 @@ public static void main(String[] args) {
     minStack.top();
     minStack.push(2);
     minStack.pop();
+    System.out.println("Min element"+ minStack.getMin());
+    minStack.push(-8);
+    System.out.println("Min element"+ minStack.getMin());
 }
 
     
