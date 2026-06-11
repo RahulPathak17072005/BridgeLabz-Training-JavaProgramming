@@ -1,1 +1,17 @@
 *.class
+# Compiled Java files
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+
+# Build folders
+target/
+bin/
+out/
+build/
